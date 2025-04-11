@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="{{ url_for('static', filename='imagens/logoo.png') }}"></div>
+        <nav>
+            <li><a href="/" id="navBarInicio">Início</a></li>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Apresentação -->
+        <section>
+            <h1>Olá. Este é meu pequeno site pessoal.</h1>
+            <p>
+                Sou desenvolvedor web com foco em criar ferramentas práticas, criativas e interativas. 
+                Gosto de resolver problemas do dia a dia, organizar processos e também me divertir criando 
+                experiências <strong>diferentes</strong>.
+            </p>
+
+        </section>
+
+        <!-- Sobre o site -->
+        <section>
+            <h2>Sobre este site</h2>
+            <p>
+                Este site é o meu espaço para mostrar algumas ferramentas que desenvolvi usando 
+                <strong>Flask</strong> (backend) junto com <strong>HTML, CSS e JavaScript</strong> no frontend. 
+                Cada ferramenta tem um propósito: desde utilidades simples até ideias mais ousadas.
+            </p>
+        </section>
+
+        <!-- Ferramentas -->
+         <section>
+            <h2>Ferramentas</h2>
+
+            <div>
+                <h2>Chatbot</h2>
+
+                <p>
+                    Trata-se sobre um ChatBot feito para uma empresa Fictícea. Seu objetivo é responder perguntas frequentes e potencialmente substituir a alta demanda do suporte.
+
+                </p>
+                <a href='/chatbot' id="botaoChatBot"><button>Acessar</button></a>
+
+            </div>
+
+         </section>
+
+
+        <button onclick="ativarCorrupcao()" id="botaoSpread">__Spread_</button>
+        
+        <audio id="glitchSound" src="{{ url_for('static', filename='sons/corrGli.mp3') }}"></audio>
+        <audio id="alghSound" src="{{ url_for('static', filename='sons/Alghim.mp3') }}"></audio>
+        <audio id="transition" src="{{ url_for('static', filename='sons/transition') }}"></audio>
+        <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+
+    </main>
+
+</body>
+
+</html>

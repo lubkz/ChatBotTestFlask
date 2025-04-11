@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatBot</title>
+</head>
+<body>
+    <h1>Executar ferramenta ChatBot</h1>
+    <form method="POST">
+        <button type="submit">Executar Organizador</button>
+    </form>
+
+    {% if resposta %}
+        <p>Resposta: {{ resposta }}</p>
+    {% endif %}
+</body>
+</html>
