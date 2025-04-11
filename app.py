@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 import ferramentas.ChatBotFunc as ChatBot
 app = Flask(__name__)
@@ -7,13 +8,6 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/chatbot", methods=["GET", "POST"])
-def ChatBotResposta():
-    resposta = None
-    if request.method == "POST":
-        pergunta = request.form['pergunta']
-        resposta = ChatBot.encontrar_resposta(pergunta=pergunta)
-    return render_template("chatbot.html", resposta=resposta)
 
 
 
@@ -21,4 +15,5 @@ def ChatBotResposta():
 
 
 if __name__ == '__main__':
-    app.run(host="0,0,0,0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
