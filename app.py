@@ -8,9 +8,13 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-
-
-
+@app.route("/chatbot", methods=["GET", "POST"])
+def ChatBotResposta():
+    resposta = None
+    if request.method == "POST":
+        pergunta = request.form['pergunta']
+        resposta = ChatBot.encontrar_resposta(pergunta=pergunta)
+    return render_template("chatbot.html", resposta=resposta)
 
 
 
