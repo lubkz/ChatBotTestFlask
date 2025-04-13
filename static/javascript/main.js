@@ -3,6 +3,57 @@ function minhaFuncao() {
 
 }
 
+let id = 1
+let somMon = document.getElementById("montando")
+function iniciarPagina() {
+  btnInt = document.getElementById("00");
+  btnInt.remove();
+  somMon.volume = 0.2;
+  somMon.play();
+
+
+  setTimeout(RitmoLoop, 800);
+
+}
+
+function fadeOutAudio(audio, velocidade = 0.05, intervalo = 200) {
+  const fade = setInterval(() => {
+    if (audio.volume > velocidade) {
+      audio.volume -= velocidade;
+
+    } else {
+      audio.volume = 0;
+      audio.pause();
+      clearInterval(fade)
+
+    }
+  }, intervalo)
+
+}
+
+function RitmoLoop() {
+
+  let intervalo = setInterval(() =>{
+    const elemento = document.querySelector(`[data-index="${id}"]`);
+    const nextElemento = document.querySelector(`[data-index="${id + 1}"]`);
+    if (elemento) {
+      elemento.classList.remove('escondido');
+      id = id + 1
+
+      if (id % 6 === 1) {
+        clearInterval(intervalo)
+        setTimeout(RitmoLoop, 1200)
+      }
+    } 
+    if (!nextElemento) {
+      fadeOutAudio(somMon);
+
+    }
+
+  }, 550)
+
+}
+
 function ativarCorrupcao() {
     const elementos = document.querySelectorAll("h1, h2, p, a"); // você pode adicionar outros se quiser
     const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:<>,.?/";
