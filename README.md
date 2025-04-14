@@ -18,4 +18,4 @@
 - [ ] Estilização final
 
 # Acesso
-Você pode acessar a versão atual do site [aqui](sharkofertas.store) — *em fase de testes*.
+Você pode acessar a versão atual do site [aqui](https:sharkofertas.store) — *em fase de testes*.
