@@ -55,7 +55,7 @@ function RitmoLoop() {
 }
 
 function ativarCorrupcao() {
-    const elementos = document.querySelectorAll("h1, h2, p, a"); // você pode adicionar outros se quiser
+    const elementos = document.querySelectorAll("h1, h2, h3, p, a"); // você pode adicionar outros se quiser
     const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:<>,.?/";
     let intervalos = [];
 
