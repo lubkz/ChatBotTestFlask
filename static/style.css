@@ -1,20 +1,112 @@
 body {
-    margin: 0;
-    padding: 30px;
+    height: 100%;
     max-width: 1600px;
     margin: auto;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #292929;
     color: #333;
 }
 
+
 header {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #383838;
     color: white;
     padding: 10px 20px;
+  }
+
+  h1 {
+    display: flex;
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    justify-content: center;
+    
+
+  }
+
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    padding-left: 30px;
+    margin-left: auto;
+  }
+
+  h3 {
+    display: inline-block;
+    padding-left: 50px;
+    padding: 20px;
+    text-align: right;   /* Alinha o texto à direita */
+    font-size: 25px;
+    background-color: #868686;
+    border-radius: 10px;
+    margin: 20px 200px;
+    margin-right: auto;    
+
+  }
+
+  p {
+    padding-left: 50px;
+    padding: 20px;
+    text-align: right;
+    background-color: #868686;
+    border-radius: 10px;
+    margin: 20px 200px;
+    margin-right: auto;
+
+  }
+
+  .alinhar-direita {
+    text-align: right;
+    margin-right: auto;
+    margin-left: 0;
+    
+  }
+  
+
+  .balao-titulo {
+    position: relative;
+    background-color: #3b82f6;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    max-width: 80%;
+    
+  }
+
+  .balao-titulo::after {
+
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #3b82f6;
+    border-left: 8px solid transparent;
+    border-right: 16px solid transparent;
+  }
+  
+
+
+  .conteudo {
+    
+
+    max-width: 1600px;
+    max-height: 100%;
+    margin: 0 auto;
+
+    padding: 30px;
+    background-color: #000000; /* fundo só da área central */
+    min-height: 100vh; /* vh = altura da viewport */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 
   .logo img {

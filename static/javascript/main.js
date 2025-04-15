@@ -157,7 +157,7 @@ function ativarCorrupcao() {
 
                     })
 
-                    document.body.style.color = "#333"
+                    document.body.style.color = "#292929"
 
                     document.getElementById("botaoSpread").classList.remove("escondido")
                     document.getElementById("botaoChatBot").classList.remove("escondido") 

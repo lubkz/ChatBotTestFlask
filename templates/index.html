@@ -4,63 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Meu Portfólio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
-    
-    <header class="escondido" data-index="1">
-        <div data-index="2" class="escondido logo"><img src="{{ url_for('static', filename='imagens/logoo.png') }}"></div>
-        <nav>
-            <li><a href="/" id="navBarInicio" data-index="3" class="escondido">Início</a></li>
+    <div class="conteudo">
+        <header>
+            <div class="logo"><img src="{{ url_for('static', filename='imagens/logoo.png') }}"></div>
+            <nav>
+                <li><a href="/" id="navBarInicio">Início</a></li>
 
-        </nav>
+            </nav>
 
-    </header>
+        </header>
 
-    <main>
-        <!-- Apresentação -->
-        <section>
-            <h1 class="escondido" data-index="4">Olá. Este é meu pequeno site pessoal.</h1>
-            <p class="escondido" data-index="5">
-                Sou desenvolvedor web com foco em criar ferramentas práticas, criativas e interativas. 
-                Gosto de resolver problemas do dia a dia, organizar processos e também me divertir criando 
-                experiências <strong>diferentes</strong>.
-            </p>
-
-        </section>
-
-        <!-- Sobre o site -->
-        <section>
-            <h2 class="escondido" data-index="6">Sobre este site</h2>
-            <p class="escondido" data-index="7">
-                Este site é o meu espaço para mostrar algumas ferramentas que desenvolvi usando 
-                <strong>Flask</strong> (backend) junto com <strong>HTML, CSS e JavaScript</strong> no frontend. 
-                Cada ferramenta tem um propósito: desde utilidades simples até ideias mais ousadas.
-            </p>
-        </section>
-
-        <!-- Ferramentas -->
-         <section>
-            <h2 class="escondido" data-index="8">Ferramentas</h2>
-
-            <div>
-                <h2 class="escondido" data-index="9">Chatbot</h2>
-
-                <p class="escondido" data-index="10">
-                    Trata-se sobre um ChatBot feito para uma empresa Fictícea. Seu objetivo é responder perguntas frequentes e potencialmente substituir a alta demanda do suporte.
-
+        <main>
+            <!-- Apresentação -->
+            <section>
+                <h1>Olá. Este é meu pequeno site pessoal.</h1>
+                <p data-index="5">
+                    Sou desenvolvedor web com foco em criar ferramentas práticas, criativas e interativas. 
+                    Gosto de resolver problemas do dia a dia, organizar processos e também me divertir criando 
+                    experiências <strong>diferentes</strong>.
                 </p>
-                <a class="escondido" href='/chatbot' id="botaoChatBot" data-index="11"><button>Acessar</button></a>
 
-            </div>
+            </section>
 
-         </section>
+            <!-- Sobre o site -->
+            <section>
+                <h2 class="balao-titulo">Sobre este site</h2>
+                <p>
+                    Este site é o meu espaço para mostrar algumas ferramentas que desenvolvi usando 
+                    <strong>Flask</strong> (backend) junto com <strong>HTML, CSS e JavaScript</strong> no frontend. 
+                    Cada ferramenta tem um propósito: desde utilidades simples até ideias mais ousadas.
+                </p>
+            </section>
+
+            <!-- Ferramentas -->
+            <section>
+                <div>
+                    <h2 class="balao-titulo">Ferramentas</h2>
+                </dib>
+
+                <div class='alinhar-direita'>
+                    <h3>Chatbot</h3>
+
+                    <p>
+                        Trata-se sobre um ChatBot feito para uma empresa Fictícea. Seu objetivo é responder perguntas frequentes e potencialmente substituir a alta demanda do suporte.
+
+                    </p>
+                    <a href='/chatbot' id="botaoChatBot"><button>Acessar</button></a>
+
+                </div>
+
+            </section>
 
 
-        <button onclick="ativarCorrupcao()" id="botaoSpread" class="escondido" data-index="12">__Spread_</button>
-        <button onclick="iniciarPagina()" id="00" data-index="12">Iniciar Programa</button>
-        
+            <button onclick="ativarCorrupcao()" id="botaoSpread">__Spread_</button> 
+            <!-- <button onclick="iniciarPagina()" id="00" class="btn btn-dark rounded-pill text-white"data-index="12">Iniciar Programa</button> -->
+    </div>
+
         <audio id="glitchSound" src="{{ url_for('static', filename='sons/corrGli.mp3') }}"></audio>
         <audio id="alghSound" src="{{ url_for('static', filename='sons/Alghim.mp3') }}"></audio>
         <audio id="transition" src="{{ url_for('static', filename='sons/transition') }}"></audio>
