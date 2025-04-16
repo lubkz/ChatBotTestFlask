@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -22,11 +22,19 @@
 
         </header>
 
+        <aside class="nav-lateral">
+            <button onclick="abrirCategoria('ferramentas')">🛠 Ferramentas</button>
+            <button onclick="abrirCategoria('sobre')">📄 Sobre o site</button>
+            <button onclick="abrirCategoria('contato')">📬 Contato</button>
+            <button onclick="abrirCategoria('github')">💻 GitHub</button>
+
+        </aside>
+
         <main>
             <!-- Apresentação -->
             <section>
                 <h1>Olá. Este é meu pequeno site pessoal.</h1>
-                <p class='escondido' id='apresentResposta'>
+                <p data-index="5">
                     Sou desenvolvedor web com foco em criar ferramentas práticas, criativas e interativas. 
                     Gosto de resolver problemas do dia a dia, organizar processos e também me divertir criando 
                     experiências <strong>diferentes</strong>.
@@ -34,29 +42,10 @@
 
             </section>
 
-        <section>
-            <aside class="nav-lateral" id='painelOpcoes'>
-                <button onclick="abrirCategoria('ferramentas')">🛠 Ferramentas</button>
-                <button onclick="abrirCategoria('sobre')">📄 Sobre o site</button>
-                <button onclick="abrirCategoria('contato')">📬 Contato</button>
-                <button onclick="abrirCategoria('github')">💻 GitHub</button>
-    
-            </aside>
-
-            <aside class="nav-lateral escondido" id='painelFerramentas'>
-                <button onclick="abrirFerramenta('chatBot')">ChatBot</button>
-                <button onclick="abrirFerramenta('xx')">- xx</button>
-                <button onclick="abrirFerramenta('xxx')">- xxx</button>
-                <button onclick="abrirFerramenta('xxxx')">- xxxx</button>
-    
-            </aside>
-
-        </section>
-
             <!-- Sobre o site -->
             <section>
-                <h2 class="balao-titulo escondido">Sobre este site</h2>
-                <p class='escondido' id='sobreResposta'>
+                <h2 class="balao-titulo">Sobre este site</h2>
+                <p>
                     Este site é o meu espaço para mostrar algumas ferramentas que desenvolvi usando 
                     <strong>Flask</strong> (backend) junto com <strong>HTML, CSS e JavaScript</strong> no frontend. 
                     Cada ferramenta tem um propósito: desde utilidades simples até ideias mais ousadas.
@@ -66,30 +55,28 @@
             <!-- Ferramentas -->
             <section>
                 <div>
-                    <h2 data-index="chatBot1" class="balao-titulo escondido">Ferramentas</h2>
-                    <h2 class="balao-titulo escondido" id='chatBotTitulo'>ChatBot</h2>
+                    <h2 class="balao-titulo">Ferramentas</h2>
                 </dib>
 
                 <div class='alinhar-direita'>
-                    <h3 id='chatBot' data-index="chatBot2" class='escondido'>Chatbot</h3>
+                    <h3 id='chatBot' class='escondido'>Chatbot</h3>
 
-                    <p id='chatExplic' data-index="chatBot3" class='escondido'>
+                    <p id='chatExplic'>
                         Trata-se sobre um ChatBot feito para uma empresa Fictícea. Seu objetivo é responder perguntas frequentes e potencialmente substituir a alta demanda do suporte.
 
                     </p>
-                    <a href='/chatbot' id="botaoChatBot" data-index="chatBot4" class='escondido'><button>Acessar</button></a>
+                    <a href='/chatbot' id="botaoChatBot"><button>Acessar</button></a>
 
                 </div>
 
             </section>
 
 
-            <button class='escondido' onclick="ativarCorrupcao()" id="botaoSpread">__Spread_</button> 
-            <button class='escondido' onclick="reiniciar()" id="botaoReiniciar">De novo?</button>
+            <button onclick="ativarCorrupcao()" id="botaoSpread">__Spread_</button> 
             
     </div>
 
-        <button onclick="iniciarPagina()" id="00" class="btn btn-dark rounded-pill text-white"data-index="12">Iniciar Programa</button>
+        < -- <button onclick="iniciarPagina()" id="00" class="btn btn-dark rounded-pill text-white"data-index="12">Iniciar Programa</button> -- >
 
         <audio id="glitchSound" src="{{ url_for('static', filename='sons/corrGli.mp3') }}"></audio>
         <audio id="alghSound" src="{{ url_for('static', filename='sons/Alghim.mp3') }}"></audio>

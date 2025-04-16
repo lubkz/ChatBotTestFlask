@@ -3,17 +3,98 @@ function minhaFuncao() {
 
 }
 
+const painelOpcoes = document.getElementById('painelOpcoes')
+const painelFerramentas = document.getElementById('painelFerramentas')
+function abrirCategoria(categoria) {
+   if (categoria === 'ferramentas') {
+    painelOpcoes.remove();
+    document.querySelector('.conteudo').appendChild(painelFerramentas);
+    painelFerramentas.classList.remove('escondido');
+    
+   }
+}
+
+function reiniciar() {
+  const elementos = document.querySelectorAll('p, h2, h3, a');
+  document.querySelector(".conteudo").appendChild(painelOpcoes);
+  document.getElementById('botaoReiniciar').classList.add('escondido')
+  
+  elementos.forEach(el =>
+    el.classList.add('escondido')
+  );
+}
+
+function abrirFerramenta(ferramenta) {
+  const chatBotFerramenta = document.getElementById('chatBotTitulo')
+  if (ferramenta === 'chatBot') {
+    painelFerramentas.remove()
+    document.querySelector('.conteudo').appendChild(chatBotFerramenta)
+
+    let id = 1
+    let interval = setInterval(() => {
+      const elemento = document.querySelector(`[data-index="chatBot${id}"]`)
+
+      if (elemento) {
+        elemento.classList.remove('escondido')
+        id = id + 1
+
+      } else {
+        document.getElementById('botaoReiniciar').classList.remove('escondido')
+        clearInterval(interval)
+        
+
+      }
+    }, 1000)
+  }
+  if (ferramenta === 'xx') {
+    document.getElementById('painelFerramentas').replaceWith(chatBotFerramenta)
+
+    let id = 1
+    let = setInterval(() => {
+      const elemento = document.querySelector(`[data-index="xx${id}"]`)
+
+      if (elemento) {
+        elemento.classList.remove('escondido')
+        id = id + 1
+
+      } else {
+        id = 0
+
+      }
+    }, 1000)
+  }
+  if (ferramenta === 'xxx') {
+    document.getElementById('painelFerramentas').replaceWith(chatBotFerramenta)
+
+    let id = 1
+    let = setInterval(() => {
+      const elemento = document.querySelector(`[data-index="xxx${id}"]`)
+
+      if (elemento) {
+        elemento.classList.remove('escondido')
+        id = id + 1
+
+      } else {
+        id = 0
+
+      }
+    }, 1000)
+  }
+}
+
+
 let id = 1
 let somMon = document.getElementById("montando")
 function iniciarPagina() {
   btnInt = document.getElementById("00");
   btnInt.remove();
   somMon.volume = 0.2;
-  somMon.play();
+  document.getElementById('paginaPrincipal').classList.remove('escondido')
+  /*somMon.play();
 
 
   setTimeout(RitmoLoop, 800);
-
+  */
 }
 
 function fadeOutAudio(audio, velocidade = 0.05, intervalo = 200) {
