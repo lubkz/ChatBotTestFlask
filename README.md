@@ -35,6 +35,8 @@ Acesse o site em produção via Railway:
 
 ## 🚀 Como executar localmente
 
+Você pode rodar este projeto localmente usando o terminal da sua escolha (como o terminal do VS Code ou Git Bash), desde que tenha o Python instalado.
+
 1. Clone o repositório:
 
 ```bash
