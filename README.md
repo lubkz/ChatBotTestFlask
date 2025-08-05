@@ -60,6 +60,7 @@ http://localhost:5000
 ```
 
 👀 Observações
+
 O foco do projeto é mais experimental e visual, sendo uma demonstração criativa e interativa para portfolio.
 
 O botão "spread", ao final da página, ativa um conjunto de interações alternativas como parte do conceito.
