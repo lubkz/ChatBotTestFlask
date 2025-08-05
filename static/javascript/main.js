@@ -5,13 +5,47 @@ function minhaFuncao() {
 
 const painelOpcoes = document.getElementById('painelOpcoes')
 const painelFerramentas = document.getElementById('painelFerramentas')
+
+const botaoSom = document.getElementById("botaoSom")
+botaoSom.volume = 0.2;
+const somNotificacao = document.getElementById("notificacao")
+somNotificacao.volume = 0.2;
+
 function abrirCategoria(categoria) {
+  botaoSom.currentTime = 0; // Reinicia o som
+  botaoSom.play();
+
    if (categoria === 'ferramentas') {
     painelOpcoes.remove();
     document.querySelector('.conteudo').appendChild(painelFerramentas);
     painelFerramentas.classList.remove('escondido');
     
    }
+   
+    if (categoria === 'sobre') {
+      painelOpcoes.remove();
+      let id = 1
+
+      let interval = setInterval(() => {
+        const elemento = document.querySelector(`[data-index="sobreMim${id}"]`)
+
+        if (elemento) {
+          somNotificacao.currentTime = 0; // Reinicia o som
+          somNotificacao.play();
+          console.log("somNotificacao")
+          elemento.classList.remove('escondido')
+          id = id + 1
+
+        } else {
+          somNotificacao.currentTime = 0; // Reinicia o som
+          somNotificacao.play();
+          console.log("somNotificacaoFinal")
+          document.getElementById('botaoReiniciar').classList.remove('escondido')
+          clearInterval(interval)
+
+        }
+    }, 1000)
+  }
 }
 
 function reiniciar() {
@@ -25,20 +59,27 @@ function reiniciar() {
 }
 
 function abrirFerramenta(ferramenta) {
-  const chatBotFerramenta = document.getElementById('chatBotTitulo')
+  botaoSom.currentTime = 0; // Reinicia o som
+  botaoSom.play();
+  
   if (ferramenta === 'chatBot') {
     painelFerramentas.remove()
-    document.querySelector('.conteudo').appendChild(chatBotFerramenta)
 
     let id = 1
     let interval = setInterval(() => {
       const elemento = document.querySelector(`[data-index="chatBot${id}"]`)
 
       if (elemento) {
+        somNotificacao.currentTime = 0; // Reinicia o som
+        somNotificacao.play();
+
         elemento.classList.remove('escondido')
         id = id + 1
 
       } else {
+        somNotificacao.currentTime = 0; // Reinicia o som
+        somNotificacao.play();
+
         document.getElementById('botaoReiniciar').classList.remove('escondido')
         clearInterval(interval)
         
@@ -54,6 +95,8 @@ function abrirFerramenta(ferramenta) {
       const elemento = document.querySelector(`[data-index="xx${id}"]`)
 
       if (elemento) {
+        somNotificacao.currentTime = 0; // Reinicia o som
+        somNotificacao.play();
         elemento.classList.remove('escondido')
         id = id + 1
 
@@ -83,9 +126,14 @@ function abrirFerramenta(ferramenta) {
 }
 
 
-let id = 1
-let somMon = document.getElementById("montando")
+
 function iniciarPagina() {
+  botaoSom.currentTime = 0; // Reinicia o som
+  botaoSom.play();
+
+  let id = 1
+  let somMon = document.getElementById("montando")
+
   btnInt = document.getElementById("00");
   btnInt.remove();
   somMon.volume = 0.2;

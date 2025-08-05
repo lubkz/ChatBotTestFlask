@@ -55,8 +55,8 @@
 
             <!-- Sobre o site -->
             <section>
-                <h2 class="balao-titulo escondido">Sobre este site</h2>
-                <p class='escondido' id='sobreResposta'>
+                <h2 data-index="sobreMim1" class="balao-titulo escondido">Sobre este site</h2>
+                <p data-index="sobreMim2" class='escondido' id='sobreResposta'>
                     Este site é o meu espaço para mostrar algumas ferramentas que desenvolvi usando 
                     <strong>Flask</strong> (backend) junto com <strong>HTML, CSS e JavaScript</strong> no frontend. 
                     Cada ferramenta tem um propósito: desde utilidades simples até ideias mais ousadas.
@@ -95,6 +95,8 @@
         <audio id="alghSound" src="{{ url_for('static', filename='sons/Alghim.mp3') }}"></audio>
         <audio id="transition" src="{{ url_for('static', filename='sons/transition') }}"></audio>
         <audio id="montando" src="{{ url_for('static', filename='sons/siteMontando.mp3') }}"></audio>
+        <audio id="notificacao" src="{{ url_for('static', filename='sons/notificacao.mp3') }}"></audio>
+        <audio id="botaoSom" src="{{ url_for('static', filename='sons/botaoPress.mp3') }}"></audio>
         <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
 
         </main>
