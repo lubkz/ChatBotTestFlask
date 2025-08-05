@@ -40,15 +40,20 @@ Acesse o site em produção via Railway:
 ```bash
 git clone https://github.com/lubkz/ChatBotTestFlask.git
 cd ChatBotTestFlask
+```
 
-Instale o Flask (caso não tenha):
+2. Instale o Flask (caso não tenha):
 pip install flask
 
+```bash
 Execute a aplicação pelo terminal:
 python app.py
+```
+3. Acesse no navegador:
 
-Acesse no navegador:
+```bash
 http://localhost:5000
+```
 
 👀 Observações
 O foco do projeto é mais experimental e visual, sendo uma demonstração criativa e interativa para portfolio.
