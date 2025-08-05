@@ -43,15 +43,17 @@ Você pode rodar este projeto localmente usando o terminal da sua escolha (como 
 git clone https://github.com/lubkz/ChatBotTestFlask.git
 cd ChatBotTestFlask
 ```
-
 2. Instale o Flask (caso não tenha):
-pip install flask
 
 ```bash
-Execute a aplicação pelo terminal:
+pip install flask
+```
+3. Execute a aplicação pelo terminal:
+
+```bash
 python app.py
 ```
-3. Acesse no navegador:
+4. Acesse no navegador:
 
 ```bash
 http://localhost:5000
